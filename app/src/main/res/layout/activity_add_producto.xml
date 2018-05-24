@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context="com.example.fauricio.inventario_2_0.add_producto">
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:hint="Nombre"/>
+
+    <EditText
+        android:id="@+id/precio"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:hint="Precio"/>
+
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:hint="Descripción"/>
+
+    <Button
+        android:id="@+id/seleccion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="seleccion"
+        android:textAlignment="center"
+        android:text="Seleccionar imagen"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="add_producto"
+        android:textAlignment="center"
+        android:text="Agregar"/>
+
+</LinearLayout>

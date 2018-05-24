@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1049662570811",
+    "firebase_url": "https://inventario-4d73a.firebaseio.com",
+    "project_id": "inventario-4d73a",
+    "storage_bucket": "inventario-4d73a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049662570811:android:2520882ca0b27c5c",
+        "android_client_info": {
+          "package_name": "com.example.fauricio.inventario_2_0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049662570811-ppu4jkbrt9kdcts7o1bdg85kvjbl77fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fauricio.inventario_2_0",
+            "certificate_hash": "e04ebbbd37519c54e8e0ac600db8877bdb6d15fc"
+          }
+        },
+        {
+          "client_id": "1049662570811-f3fhd7481f34lob6vb9e1l0t5rpku5na.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUDZm3rD4B68Ntlhq_8y-dNEPB0X3BHYY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049662570811-f3fhd7481f34lob6vb9e1l0t5rpku5na.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
