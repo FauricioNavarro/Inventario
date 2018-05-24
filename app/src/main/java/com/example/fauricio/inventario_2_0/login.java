@@ -75,6 +75,7 @@ public class login extends AppCompatActivity implements GoogleApiClient.OnConnec
 
     public void login(){
         Intent intent = Auth.GoogleSignInApi.getSignInIntent(myGoogleSignInClient);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivityForResult(intent,RC_SIGN_IN);
     }
 }

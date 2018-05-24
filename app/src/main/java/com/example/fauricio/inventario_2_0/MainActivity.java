@@ -1,12 +1,14 @@
 package com.example.fauricio.inventario_2_0;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -72,6 +74,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                final int id_producto = position;
+                new AlertDialog.Builder(MainActivity.this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Está seguro?")
+                        .setMessage("Desea eliminar el producto ?")
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                String id = ArrayItem.get(id_producto).getId();FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+                                DatabaseReference myRef = database1.getReference().child("productos");
+                                myRef.child(id).removeValue();
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+            }
+        });
+
+
 
         cargarLista(this);
     }
