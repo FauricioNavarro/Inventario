@@ -39,12 +39,13 @@ public class detalle_producto extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Log.w("PRODUCTO",dataSnapshot.child(j).child("nombre").getValue().toString());
-                    nom.setText(dataSnapshot.child(j).child("nombre").getValue().toString());
-                    pre.setText(dataSnapshot.child(j).child("precio").getValue().toString());
-                    des.setText(dataSnapshot.child(j).child("descripcion").getValue().toString());
+                    nom.setText("Nombre: "+dataSnapshot.child(j).child("nombre").getValue().toString());
+                    pre.setText("Precio: "+dataSnapshot.child(j).child("precio").getValue().toString());
+                    des.setText("Descripción: "+dataSnapshot.child(j).child("descripcion").getValue().toString());
                     ImageDownloadTask downloadTask = new ImageDownloadTask();
                     try {
-                        Bitmap result = downloadTask.execute("https://firebasestorage.googleapis.com/v0/b/inventario-4d73a.appspot.com/o/"+nom.getText()+
+                        Bitmap result = downloadTask.execute("https://firebasestorage.googleapis.com/v0/b/inventario-4d73a.appspot.com/o/"+
+                                dataSnapshot.child(j).child("nombre").getValue().toString()+
                                 "?alt=media&token=49d0fda1-dbb4-4189-9ac3-84f40c21d047").get();
                         img.setImageBitmap(result);
                     } catch (InterruptedException e) {
